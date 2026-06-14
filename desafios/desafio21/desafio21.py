@@ -2,7 +2,7 @@ from rich import print
 class Pen:
     colors={"vermelho":"red","azul":"blue","verde":"green"}
     def __init__(self,color):
-        self.color=color.lower()
+        self.color=color.lower().strip()
         self.true=False
     
     def uncork(self):
@@ -17,6 +17,9 @@ class Pen:
            
     def break_line(self,number):
         print(number * "\n")
+    
+    def cover(self):
+        self.true=False
 
     
 
